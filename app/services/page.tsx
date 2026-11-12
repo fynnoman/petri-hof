@@ -13,27 +13,27 @@ const services = [
 export default function Services() {
   return (
     <>
-      <section className="pt-40 pb-20 px-6 text-center">
+      <section className="pt-32 md:pt-40 pb-14 md:pb-20 px-6 text-center">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.3em] text-bordeaux/70 mb-5">Wir für Sie</p>
+          <p className="text-[11px] uppercase tracking-[0.3em] text-bordeaux/70 mb-4 md:mb-5">Wir für Sie</p>
           <h1 className="font-display text-[clamp(44px,8vw,96px)] leading-[1.02] tracking-tightest text-bordeaux-ink">
             Services
           </h1>
         </Reveal>
       </section>
 
-      <section className="pb-32 px-6">
-        <div className="max-w-6xl mx-auto space-y-24">
+      <section className="pb-20 md:pb-32 px-6">
+        <div className="max-w-6xl mx-auto space-y-16 md:space-y-24">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={60}>
-              <article className={`grid md:grid-cols-2 gap-12 items-center ${i % 2 ? "md:[&>div:first-child]:order-2" : ""}`}>
+              <article className={`grid md:grid-cols-2 gap-6 md:gap-12 items-center ${i % 2 ? "md:[&>div:first-child]:order-2" : ""}`}>
                 <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
                   <Image src={`/images/${s.img}`} alt={s.title} fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
                 </div>
-                <div className="space-y-5 md:px-6">
-                  <h2 className="font-display text-[clamp(30px,4.5vw,52px)] tracking-tightest text-bordeaux-ink leading-[1.08]">{s.title}</h2>
-                  <p className="text-[16px] md:text-[18px] leading-relaxed text-bordeaux-ink/80 whitespace-pre-line">{s.text}</p>
-                  <a href="tel:+4968347829820" className="inline-block mt-3 text-[14px] text-bordeaux hover:text-bordeaux-deep transition-colors">
+                <div className="space-y-4 md:space-y-5 md:px-6">
+                  <h2 className="font-display text-[clamp(28px,4.5vw,52px)] tracking-tightest text-bordeaux-ink leading-[1.08]">{s.title}</h2>
+                  <p className="text-[15px] md:text-[18px] leading-relaxed text-bordeaux-ink/80 whitespace-pre-line">{s.text}</p>
+                  <a href="tel:+4968347829820" className="inline-block mt-2 md:mt-3 text-[14px] text-bordeaux hover:text-bordeaux-deep transition-colors">
                     Jetzt Anrufen →
                   </a>
                 </div>

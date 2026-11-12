@@ -48,40 +48,40 @@ export default function Home() {
           <Image src="/images/exterior-wide.jpg" alt="Petri-Hof" fill priority className="object-cover opacity-[0.55]" />
           <div className="absolute inset-0 bg-gradient-to-b from-cream/70 via-cream/40 to-cream" />
         </div>
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto fade-in">
-          <Image src="/images/logo.jpg" alt="Petri-Hof" width={160} height={160} className="mx-auto mb-10 rounded-2xl" />
-          <h1 className="font-display text-[clamp(44px,9vw,120px)] leading-[0.95] tracking-tightest text-bordeaux-ink">
+        <div className="relative z-10 text-center px-5 max-w-5xl mx-auto fade-in pt-24 pb-20 md:py-0">
+          <Image src="/images/logo.jpg" alt="Petri-Hof" width={160} height={160} className="mx-auto mb-7 md:mb-10 w-28 h-28 md:w-40 md:h-40 rounded-2xl" />
+          <h1 className="font-display text-[clamp(38px,9vw,120px)] leading-[0.96] tracking-tightest text-bordeaux-ink">
             Im Petri-Hof<br />
             ist <span className="italic text-bordeaux">einiges</span> anders.
           </h1>
-          <p className="mt-8 text-[17px] md:text-[19px] text-bordeaux-ink/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 md:mt-8 text-[15px] md:text-[19px] text-bordeaux-ink/70 max-w-2xl mx-auto leading-relaxed">
             Genießen Sie das gute Gefühl, einfach einmal Gast zu sein und umsorgt zu werden.
           </p>
-          <p className="mt-5 text-[15px] md:text-[17px] text-bordeaux-ink/60 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 md:mt-5 text-[13px] md:text-[17px] text-bordeaux-ink/60 max-w-2xl mx-auto leading-relaxed">
             Sehr persönlich, sehr liebenswert, mit viel Atmosphäre und einem heiteren Lachen.
           </p>
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <a href="/speisekarte.pdf" target="_blank" rel="noopener" className="px-7 py-3.5 rounded-full bg-bordeaux text-cream text-[14px] tracking-wide hover:bg-bordeaux-deep transition-all">
+          <div className="mt-9 md:mt-12 flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 md:gap-4 px-2">
+            <a href="/speisekarte.pdf" target="_blank" rel="noopener" className="px-7 py-4 md:py-3.5 rounded-full bg-bordeaux text-cream text-[14px] tracking-wide hover:bg-bordeaux-deep transition-all text-center">
               Speisekarte ansehen
             </a>
-            <a href="tel:+4968347829820" className="px-7 py-3.5 rounded-full border border-bordeaux/25 text-bordeaux-ink text-[14px] tracking-wide hover:bg-bordeaux hover:text-cream hover:border-bordeaux transition-all">
+            <a href="tel:+4968347829820" className="px-7 py-4 md:py-3.5 rounded-full border border-bordeaux/25 text-bordeaux-ink text-[14px] tracking-wide hover:bg-bordeaux hover:text-cream hover:border-bordeaux transition-all text-center">
               Jetzt Anrufen
             </a>
           </div>
         </div>
 
-        {/* scroll hint */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[11px] tracking-[0.4em] uppercase text-bordeaux-ink/50 flex flex-col items-center gap-3">
+        {/* scroll hint — desktop only */}
+        <div className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 text-[11px] tracking-[0.4em] uppercase text-bordeaux-ink/50 flex-col items-center gap-3">
           <span>Scroll</span>
           <span className="w-px h-10 bg-bordeaux-ink/30" />
         </div>
       </section>
 
       {/* TICKER STRIP */}
-      <section className="py-6 border-y border-bordeaux/15 bg-cream overflow-hidden">
-        <div className="marquee-fast text-bordeaux-ink/80 font-display text-[22px] md:text-[28px] tracking-tightest whitespace-nowrap">
+      <section className="py-4 md:py-6 border-y border-bordeaux/15 bg-cream overflow-hidden">
+        <div className="marquee-fast text-bordeaux-ink/80 font-display text-[18px] md:text-[28px] tracking-tightest whitespace-nowrap">
           {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-8 shrink-0">
+            <div key={i} className="flex items-center gap-5 md:gap-8 shrink-0">
               <span>Hotel</span>
               <span className="text-bordeaux">✦</span>
               <span>Restaurant</span>
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* INTRO STATEMENT */}
-      <section className="py-32 px-6 relative">
+      <section className="py-20 md:py-32 px-6 relative">
         <div className="max-w-5xl mx-auto">
           <Reveal>
             <p className="text-[clamp(12px,1vw,13px)] uppercase tracking-[0.4em] text-bordeaux mb-10">— Willkommen</p>
@@ -114,8 +114,8 @@ export default function Home() {
       </section>
 
       {/* STATS STRIP */}
-      <section className="py-20 px-6 border-y border-bordeaux/10 bg-bone">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
+      <section className="py-14 md:py-20 px-6 border-y border-bordeaux/10 bg-bone">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 md:gap-10">
           {[
             { n: "180", l: "Gäste" },
             { n: "2", l: "Festsäle" },
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* CINEMATIC VIDEO SPLIT */}
-      <section className="py-32 px-6">
+      <section className="py-20 md:py-32 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
           <Reveal>
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-bordeaux-ink">
@@ -160,21 +160,21 @@ export default function Home() {
       </section>
 
       {/* DARK CINEMATIC FULL-BLEED */}
-      <section className="relative min-h-[85vh] overflow-hidden bg-bordeaux-ink grain">
+      <section className="relative min-h-[70vh] md:min-h-[85vh] overflow-hidden bg-bordeaux-ink grain">
         <div className="absolute inset-0">
           <Image src="/images/festsaal-elegant.jpg" alt="" fill className="object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-b from-bordeaux-ink/70 via-bordeaux-ink/70 to-bordeaux-ink" />
         </div>
-        <div className="relative z-10 min-h-[85vh] flex items-center px-6 py-32">
+        <div className="relative z-10 min-h-[70vh] md:min-h-[85vh] flex items-center px-6 py-24 md:py-32">
           <div className="max-w-6xl mx-auto w-full">
             <Reveal>
-              <p className="text-[11px] uppercase tracking-[0.4em] text-bordeaux-soft mb-8">— Für bis zu 180 Gäste</p>
-              <h2 className="font-display text-[clamp(40px,8vw,120px)] leading-[0.98] tracking-tightest text-cream">
+              <p className="text-[11px] uppercase tracking-[0.4em] text-bordeaux-soft mb-6 md:mb-8">— Für bis zu 180 Gäste</p>
+              <h2 className="font-display text-[clamp(36px,8vw,120px)] leading-[0.98] tracking-tightest text-cream">
                 Zwei <span className="italic text-bordeaux-soft">Festsäle.</span><br />
                 Ein <span className="italic text-bordeaux-soft">Rahmen.</span><br />
                 Ihr Moment.
               </h2>
-              <p className="mt-10 max-w-2xl text-[17px] md:text-[19px] leading-relaxed text-cream/75">
+              <p className="mt-8 md:mt-10 max-w-2xl text-[15px] md:text-[19px] leading-relaxed text-cream/75">
                 Für Feierlichkeiten und Events mit bis zu 180 Personen bieten unsere beiden Festsäle Ihnen den passenden Rahmen.
               </p>
             </Reveal>
@@ -183,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* THREE AMBIENCES */}
-      <section className="py-32 px-6">
+      <section className="py-20 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="mb-16 flex items-end justify-between gap-6 flex-wrap">
@@ -199,7 +199,7 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-4 md:gap-5 md:grid-cols-3">
             <Reveal delay={0}>
               <div className="group relative rounded-3xl overflow-hidden aspect-[3/4]">
                 <Image src="/images/restaurant-bar.jpg" alt="Pilsstube" fill className="object-cover transition-transform duration-[1500ms] group-hover:scale-105" sizes="(min-width: 768px) 33vw, 100vw" />
@@ -249,22 +249,22 @@ export default function Home() {
         </Reveal>
         <div className="marquee">
           {[...gallery, ...gallery].map((img, i) => (
-            <div key={i} className="relative shrink-0 w-[320px] h-[420px] rounded-2xl overflow-hidden">
-              <Image src={`/images/${img}`} alt="" fill className="object-cover" sizes="320px" />
+            <div key={i} className="relative shrink-0 w-[220px] h-[290px] md:w-[320px] md:h-[420px] rounded-2xl overflow-hidden">
+              <Image src={`/images/${img}`} alt="" fill className="object-cover" sizes="(min-width: 768px) 320px, 220px" />
             </div>
           ))}
         </div>
-        <div className="marquee mt-6" style={{ animationDirection: "reverse" }}>
+        <div className="marquee mt-4 md:mt-6" style={{ animationDirection: "reverse" }}>
           {[...galleryB, ...galleryB].map((img, i) => (
-            <div key={i} className="relative shrink-0 w-[260px] h-[340px] rounded-2xl overflow-hidden">
-              <Image src={`/images/${img}`} alt="" fill className="object-cover" sizes="260px" />
+            <div key={i} className="relative shrink-0 w-[180px] h-[230px] md:w-[260px] md:h-[340px] rounded-2xl overflow-hidden">
+              <Image src={`/images/${img}`} alt="" fill className="object-cover" sizes="(min-width: 768px) 260px, 180px" />
             </div>
           ))}
         </div>
       </section>
 
       {/* SIGNATURE / FAMILIE */}
-      <section className="py-32 px-6">
+      <section className="py-20 md:py-32 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-5 gap-14 items-center">
           <Reveal>
             <div className="md:col-span-2 relative rounded-3xl overflow-hidden aspect-[4/5]">
@@ -288,7 +288,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-32 px-6 bg-bone">
+      <section id="services" className="py-20 md:py-32 px-6 bg-bone">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="text-center mb-20">
@@ -320,7 +320,7 @@ export default function Home() {
       </section>
 
       {/* NEWS */}
-      <section className="py-32 px-6">
+      <section className="py-20 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="mb-16 flex items-end justify-between gap-6 flex-wrap">
@@ -353,18 +353,18 @@ export default function Home() {
       </section>
 
       {/* HUGE TYPOGRAPHIC CTA */}
-      <section className="relative overflow-hidden bg-bordeaux text-cream py-40 px-6">
+      <section className="relative overflow-hidden bg-bordeaux text-cream py-24 md:py-40 px-6">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <Reveal>
-            <p className="text-[11px] uppercase tracking-[0.5em] text-cream/70 mb-10">— Wir kümmern uns um Sie</p>
-            <h2 className="font-display leading-[0.88] tracking-tightest text-[clamp(56px,14vw,220px)]">
+            <p className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] md:tracking-[0.5em] text-cream/70 mb-8 md:mb-10">— Wir kümmern uns um Sie</p>
+            <h2 className="font-display leading-[0.9] tracking-tightest text-[clamp(64px,16vw,220px)]">
               Jetzt<br />
               <span className="italic">anrufen.</span>
             </h2>
-            <a href="tel:+4968347829820" className="mt-14 inline-block font-display text-[clamp(30px,5vw,56px)] tracking-tightest border-b-2 border-cream/40 pb-3 hover:border-cream transition-colors">
+            <a href="tel:+4968347829820" className="mt-10 md:mt-14 inline-block font-display text-[clamp(24px,6vw,56px)] tracking-tightest border-b-2 border-cream/40 pb-2 md:pb-3 hover:border-cream transition-colors break-all">
               06834 7829820
             </a>
-            <div className="mt-10">
+            <div className="mt-8 md:mt-10">
               <a href="/speisekarte.pdf" target="_blank" rel="noopener" className="inline-block px-7 py-3.5 rounded-full border border-cream/30 text-cream text-[14px] tracking-wide hover:bg-cream hover:text-bordeaux transition-all">
                 Speisekarte ansehen
               </a>
@@ -372,15 +372,15 @@ export default function Home() {
           </Reveal>
         </div>
         {/* decorative outline text */}
-        <div className="pointer-events-none absolute -bottom-10 left-0 right-0 text-center">
-          <div className="font-display text-outline text-cream text-[clamp(80px,22vw,360px)] leading-none tracking-tightest opacity-15">
+        <div className="pointer-events-none absolute -bottom-4 md:-bottom-10 left-0 right-0 text-center">
+          <div className="font-display text-outline text-cream text-[clamp(80px,22vw,360px)] leading-none tracking-tightest opacity-15 whitespace-nowrap">
             Petri-Hof
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-32 px-6 bg-bone">
+      <section className="py-20 md:py-32 px-6 bg-bone">
         <div className="max-w-3xl mx-auto">
           <Reveal>
             <div className="text-center mb-16">
