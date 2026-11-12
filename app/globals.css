@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bordeaux: #BE1E2D;
+  --bordeaux-deep: #8F1621;
+  --bordeaux-ink: #1F0609;
+  --cream: #FBF8F4;
+  --bone: #F4EFE8;
+}
+
+html, body {
+  background: var(--cream);
+  color: var(--bordeaux-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background: var(--bordeaux);
+  color: var(--cream);
+}
+
+.scroll-smooth { scroll-behavior: smooth; }
+
+.fade-in {
+  animation: fadeIn 1.2s ease-out both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.marquee {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 35s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Apple-like crisp hairline */
+.hairline { box-shadow: inset 0 -1px 0 rgba(26,7,8,0.08); }
+
+.marquee-fast {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 25s linear infinite;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px currentColor;
+  color: transparent;
+}
+
+.stat-num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum", "ss01";
+}
+
+/* subtle grain */
+.grain::before {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: radial-gradient(rgba(255,255,255,0.8) 1px, transparent 1px);
+  background-size: 3px 3px;
+  mix-blend-mode: overlay;
+}
+
+.kinetic-char {
+  display: inline-block;
+  animation: kinetic 6s ease-in-out infinite;
+}
+@keyframes kinetic {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
